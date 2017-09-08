@@ -12,9 +12,7 @@ class CapturePage extends Component{
   }
 
   onNextClicked(){
-    console.log(createImage)
-    // Save image then on success navigate to the link below
-    browserHistory.push('/image/1234')
+    this.props.createImage(this.props.activeScreenshot)
   }
 
   render(){
@@ -34,7 +32,8 @@ class CapturePage extends Component{
 }
 
 CapturePage.propTypes = {
-  activeScreenshot: PropTypes.string
+  activeScreenshot: PropTypes.string,
+  createImage: PropTypes.func
 }
 
 function mapStateToProps(state){
@@ -44,4 +43,14 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, null)(CapturePage)
+function mapDispatchToProps(dispatch){
+  return {
+    createImage: (image) => {
+      dispatch(createImage(image)).then(function(){
+        browserHistory.push('/image/1234')
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CapturePage)

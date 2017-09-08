@@ -19,13 +19,16 @@ export function loadImages(){
 
 export function createImage(imageData){
   return function(dispatch){
+    return new Promise(function(resolve, reject){
+      dispatch({ type: LOAD_IMAGES })
 
-    dispatch({ type: LOAD_IMAGES })
+      // TODO: send post request with data
+      const image = { id: 1234, url: 'http://via.placeholder.com/350x150' }
+      setTimeout(function(){
+        dispatch({ type: CREATE_IMAGE, payload: image })
+        resolve()
 
-    // TODO: send post request with data
-    const image = { id: 1234, url: 'http://via.placeholder.com/350x150' }
-    setTimeout(function(){
-      dispatch({ type: CREATE_IMAGE, payload: image })
-    }, 2500)
+      }, 2500)
+    })
   }
 }
