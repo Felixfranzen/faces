@@ -57,8 +57,8 @@ class Webcam extends Component {
     return (
       <div>
         <img src={this.props.activeScreenshot}></img>
-        <div>
-          <button onClick={this.onClearClicked}>use a new photo</button>
+        <div className="sep1">
+          <button onClick={this.onClearClicked}>Take a new photo</button>
         </div>
       </div>
     )
@@ -68,15 +68,15 @@ class Webcam extends Component {
     return (
       <div>
         <video id="webcam-stream" src={window.URL.createObjectURL(this.props.stream)} autoPlay="true"></video>
-        <div>
-          <button onClick={this.onScreenshotClicked}>Take a photo</button>
+        <div className="sep1">
+          <button onClick={this.onScreenshotClicked} className="primary">Take a photo</button>
         </div>
       </div>
     )
   }
 
   renderPrompt(){
-    return <button onClick={this.onRequestClicked}>Allow access to camera</button>
+    return <button className="sep1" onClick={this.onRequestClicked}>Allow access to camera</button>
   }
 
   getScreenshot(){

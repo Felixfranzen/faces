@@ -16,8 +16,9 @@ class CapturePage extends Component{
   }
 
   render(){
+    // TODO: this can be better haha
     const activeImage = this.props.images.filter(image => {
-      return image.id === 1234
+      return image.id === this.props.routeParams.id
     })[0]
 
     if (activeImage){
@@ -35,7 +36,8 @@ class CapturePage extends Component{
 
 CapturePage.propTypes = {
   images: PropTypes.array,
-  loadImages: PropTypes.func
+  loadImages: PropTypes.func,
+  routeParams: PropTypes.object
 }
 
 function mapStateToProps(state){

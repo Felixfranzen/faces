@@ -7,7 +7,7 @@ export function loadImages(){
 
     const images = [
       {
-        id: 1234,
+        id: '1234',
         url: 'http://via.placeholder.com/350x150'
       }
     ]
@@ -23,11 +23,10 @@ export function createImage(imageData){
       dispatch({ type: LOAD_IMAGES })
 
       // TODO: send post request with data
-      const image = { id: 1234, url: 'http://via.placeholder.com/350x150' }
+      const image = { id: '5678', url: 'http://via.placeholder.com/350x150' }
       setTimeout(function(){
         dispatch({ type: CREATE_IMAGE, payload: image })
-        resolve()
-
+        resolve(image.id)
       }, 2500)
     })
   }

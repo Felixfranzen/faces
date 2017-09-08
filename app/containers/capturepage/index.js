@@ -21,7 +21,9 @@ class CapturePage extends Component{
     return (
       <div>
         <Webcam></Webcam>
-        { nextButton }
+        <div className="sep1">
+          { nextButton }
+        </div>
       </div>
     )
   }
@@ -46,8 +48,8 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
   return {
     createImage: (image) => {
-      dispatch(createImage(image)).then(function(){
-        browserHistory.push('/image/1234')
+      dispatch(createImage(image)).then(function(id){
+        browserHistory.push(`/image/${id}`)
       })
     }
   }

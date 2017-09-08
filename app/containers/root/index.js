@@ -9,8 +9,10 @@ export default class Root extends Component{
   render(){
     return (
       <div className="root-container">
-        <h1>Webcam project</h1>
-        { this.props.children }
+        <h1 className="align-center">Webcam project</h1>
+        <div className="image-content-container">
+          { this.props.children }
+        </div>
       </div>
     )
   }

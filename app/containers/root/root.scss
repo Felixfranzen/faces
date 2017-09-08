@@ -1,6 +1,45 @@
-.root-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  color: $black;
+  font-family: $font-stack;
+}
+
+
+button {
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: $secondary-dark;
+  color: $white;
+  cursor: pointer;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.sep1{
+    margin-top: 1rem;
+}
+
+.sep2{
+    margin-top: 3rem;
+}
+
+.sep2{
+    margin-top: 6rem;
+}
+
+
+.image-content-container {
+  padding: 3rem;
+  background-color: $white;
+  /* Rectangle: */
+  box-shadow: 0 10px 20px 0 rgba(26,12,17,0.12);
+
+  width: 640px;
+  margin: 0 auto;
 }
