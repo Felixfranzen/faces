@@ -1,0 +1,3 @@
+export const SET_STREAM = 'SET_STREAM'
+export const CLEAR_SCREENSHOT = 'CLEAR_SCREENSHOT'
+export const GET_SCREENSHOT = 'GET_SCREENSHOT'
