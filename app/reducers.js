@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import counter from './containers/examplepage/reducers'
+import stream from './containers/webcam/reducers'
 
 const rootReducer = combineReducers({
-  counter: counter
+  stream: stream
 })
 
 export default rootReducer

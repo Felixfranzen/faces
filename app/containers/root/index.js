@@ -9,7 +9,7 @@ export default class Root extends Component{
   render(){
     return (
       <div className="root-container">
-        <h1>React/Redux starter project</h1>
+        <h1>Webcam project</h1>
         { this.props.children }
       </div>
     )
