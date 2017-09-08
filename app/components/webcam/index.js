@@ -3,6 +3,12 @@ import { connect } from 'react-redux'
 import { requestStream, getScreenshot, clearScreenshot } from './actions'
 import PropTypes from 'prop-types'
 
+/*
+
+  Renders a Webcam component with image capture functionality.
+
+*/
+
 class Webcam extends Component {
   constructor(props){
     super(props)
@@ -31,12 +37,11 @@ class Webcam extends Component {
     if (this.props.activeScreenshot){
       contentEl = this.renderScreenshot()
 
-    // if the user has allowed access to the webcam and a stream
-    // is available
+    // if the user has allowed access to the webcam, show the available stream
     } else if (this.props.stream){
       contentEl = this.renderVideo()
 
-    // if no stream is available, show a prompt to allow acces to webcam
+    // if no stream is available, show a prompt to allow acces to the webcam
     } else {
       contentEl = this.renderPrompt()
     }

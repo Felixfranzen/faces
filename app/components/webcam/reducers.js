@@ -8,14 +8,10 @@ const defaultState = {
 
 // TODO ADD ERROR HANDLING
 export default function(state = defaultState, action){
-  console.log(action)
   switch (action.type){
-    case SET_STREAM:
-      return {
-        stream: action.payload,
-        requesting: false
-      }
 
+    case SET_STREAM:
+      return { ...state, stream: action.payload }
 
     case GET_SCREENSHOT:
       return { ...state, activeScreenshot: action.payload }
