@@ -4,7 +4,7 @@ const utils = require('./utils.js')
 
 const app = express()
 
-const PORT_NUMBER = 3000
+const PORT_NUMBER = process.env.PORT || 3000
 
 // Middleware
 
