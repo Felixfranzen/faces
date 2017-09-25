@@ -35,5 +35,9 @@
         ],
 
         "no-console": ["warn"]
+    },
+
+    "globals": {
+        "API_URL": true
     }
 }

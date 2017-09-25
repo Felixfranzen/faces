@@ -1,4 +1,5 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './app/index.js',
@@ -28,6 +29,9 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('public/styles.css', {
       allChunks: true
+    }),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify(process.env.API_URL),
     })
   ],
 

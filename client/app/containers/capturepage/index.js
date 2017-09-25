@@ -48,7 +48,7 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
   return {
     createImage: (image) => {
-      dispatch(createImage(image)).then(function(id){
+      dispatch(createImage(image)).then(function({ id }){
         browserHistory.push(`/image/${id}`)
       })
     }

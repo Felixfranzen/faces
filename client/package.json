@@ -1,11 +1,11 @@
 {
-  "name": "reacttest",
+  "name": "face",
   "version": "0.0.1",
   "description": "none",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start-dev": "API_URL='http://localhost:3000' node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "",
   "license": "ISC",
