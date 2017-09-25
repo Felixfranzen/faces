@@ -3,6 +3,12 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { loadImages } from '../../core/images/actions'
 
+function findImageWithId(images, id){
+  return images.find(image => {
+    return image.id === id
+  })
+}
+
 class CapturePage extends Component{
   constructor(props){
     super(props)
@@ -16,10 +22,7 @@ class CapturePage extends Component{
   }
 
   render(){
-    // TODO: this can be better haha
-    const activeImage = this.props.images.filter(image => {
-      return image.id === this.props.routeParams.id
-    })[0]
+    const activeImage = findImageWithId(this.props.images, this.props.routeParams.id)
 
     if (activeImage){
       return (
@@ -48,7 +51,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
   return {
-    loadImages: () => { dispatch(loadImages(loadImages)) }
+    loadImages: () => { dispatch(loadImages()) }
   }
 }
 

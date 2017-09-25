@@ -1,13 +1,13 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-	entry: "./app/index.js",
-	output: {
-		path: __dirname + '/dist',
-		filename: 'bundle.js'
-	},
+  entry: './app/index.js',
+  output: {
+    path: __dirname + '/dist',
+    filename: 'bundle.js'
+  },
 
-	module: {
+  module: {
     loaders: [
       {
         test: /\.js/,
@@ -27,8 +27,8 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('public/styles.css', {
-            allChunks: true
-        })
+      allChunks: true
+    })
   ],
 
   devServer: {
@@ -36,4 +36,4 @@ module.exports = {
     contentBase: './',
     inline: true
   },
-};
+}
