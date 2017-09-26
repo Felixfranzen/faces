@@ -38,6 +38,8 @@
     },
 
     "globals": {
-        "API_URL": true
+        "API_URL": true,
+        "process": true,
+        "__dirname":true
     }
 }

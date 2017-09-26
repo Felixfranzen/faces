@@ -13,5 +13,5 @@ $secondary_dark: #565555;
 $white: #fff;
 $black: #333;
 
-@import "containers/root/root";
-@import "components/webcam/webcam";
+@import "./containers/root/root";
+@import "./components/webcam/webcam";

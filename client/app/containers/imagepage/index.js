@@ -4,9 +4,7 @@ import PropTypes from 'prop-types'
 import { loadImages } from '../../core/images/actions'
 
 function findImageWithId(images, id){
-  return images.find(image => {
-    return image.id === id
-  })
+  return images.find(image => image.id === id)
 }
 
 class CapturePage extends Component{
@@ -16,7 +14,7 @@ class CapturePage extends Component{
 
   componentDidMount(){
     if (this.props.images.length === 0){
-      console.log(this.props.loadImages())
+      this.props.loadImages()
       return
     }
   }
@@ -33,7 +31,7 @@ class CapturePage extends Component{
       )
     }
 
-    return <div></div>
+    return <div>Loading...</div>
   }
 }
 
